@@ -23,7 +23,7 @@ public class BDjdbc extends BD implements java.io.Serializable {
 	private String dataSource;
 
 	public BDjdbc() {
-
+//teste
 	}
 
 	public void setDataSource(String dataSource) {
