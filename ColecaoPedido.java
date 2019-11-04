@@ -63,7 +63,7 @@ public  class ColecaoPedido{
 	}
 	
 
-/**
+/** tebd_project.ColecaoPedido
 * 
 */	
 	public void AdicionarPedido()throws Exception{

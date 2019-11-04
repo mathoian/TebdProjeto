@@ -1,5 +1,15 @@
+
 public class Item{
 	
+	private long id_pedido;
+	
+	public long getId_pedido() {
+		return id_pedido;
+	}
+	public void setId_pedido(long id_pedido) {
+		this.id_pedido = id_pedido;
+	}
+
 	private String descricao;
 	private int quantidade;
 	private double valorUnitario;

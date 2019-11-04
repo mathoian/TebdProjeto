@@ -1,16 +1,16 @@
 import java.util.*;
 public class Pedido{
-	private Integer id;
+	private Integer id_pedido;
 	private Collection cItem = new HashSet();
 	private String descricao;
 
 	public Pedido(Integer newId, String newDescricao){
-		this.id = newId;
+		this.id_pedido = newId;
 		this.descricao = newDescricao;	
 	}
 	
 	public Integer getID(){
-		return this.id;
+		return this.id_pedido;
 	}
 	
 	public String getDescricao(){
@@ -34,7 +34,7 @@ public class Pedido{
 		String retorno;
 		int count = 1;
 		retorno = "Pedido:\n";
-		retorno += "Id do Pedido:" + this.id + "\n";
+		retorno += "Id do Pedido:" + this.id_pedido + "\n";
 		retorno += "Descricao do Pedido: " + this.descricao + "\n";
 		retorno += "Total do Pedido: " + this.getValorTotalPedido() + "\n";
 		retorno += "Itens Comprados: \n";

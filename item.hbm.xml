@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+                                                                     
+<hibernate-mapping schema="db_tebd">
+
+<class name="tebd_project.Item" table="item">
+<id name="id_item" type="long">
+<column name="id_item"/>
+<generator class="increment"/>
+</id>
+ 
+ <property name="descricao" type="string">
+ 	<column name="descricao" length="45"/>
+ </property>
+ 
+ 
+ <property name="quantidade" type="int">
+ 	<column name="quantidade"/>
+ </property>
+ 
+ 
+ <property name="valorUnitario" type="float">
+ 	<column name="valorUnitario"/>
+ </property>
+ 
+ <set name="pedido_item" table="pedido" inverse="true" lazy="true" fetch="select" >
+ <key> <column name="id_item" not-null="true"></column>
+ </key>
+ <one-to-many class="pedido"/>
+ </set>
+ 
+ </class>
+</hibernate-mapping>
+

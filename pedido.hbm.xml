@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+                                                                     
+<hibernate-mapping schema="db_tebd">
+
+<class name="tebd_project.pedido" table="pedido">
+<id name="id" type="long">
+<column name="id"/>
+<generator class="increment"/>
+</id>
+<many-to-one name="item" class="item"> 
+<column name="id_item" not-null="true" unique="true"></column>
+</many-to-one>
+ 
+ <property name="descricao" type="string">
+ 	<column name="descricao" length="45"/>
+ </property>
+  
+ </class>
+</hibernate-mapping>
